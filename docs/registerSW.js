@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/daily-planner-pwa/sw.js', { scope: '/daily-planner-pwa/' })})}
