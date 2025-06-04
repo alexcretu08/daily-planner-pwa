@@ -125,13 +125,37 @@ function App() {
     localStorage.setItem('dailyPlannerDoneMap', JSON.stringify(doneMap));
   }, [doneMap]);
 
-  const toggleDone = (scheduleId) => {
-    setDoneMap((prev) => ({
-      ...prev,
-      [scheduleId]: !prev[scheduleId],
-    }));
-  };
+// ──────────────────────────────────
+// NEW: toggleDone sends an immediate “toggle” event to Apps Script
+// ──────────────────────────────────
+const toggleDone = (scheduleId) => {
+  // 1) Flip local state so the UI updates immediately
+  setDoneMap((prev) => {
+    const newValue = !prev[scheduleId];
+    const updated = { ...prev, [scheduleId]: newValue };
 
+    // 2) POST this toggle event to Apps Script
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'toggle',          // tells Apps Script: this is a toggle event
+        id: scheduleId,          // which schedule row was toggled
+        newState: newValue,      // true if checked, false if unchecked
+        timestamp: new Date().toISOString() // the exact UTC time of the click
+      }),
+    })
+      .then((r) => r.json())
+      .then((resp) => {
+        console.log('Toggle event logged:', resp);
+      })
+      .catch((err) => {
+        console.error('Error logging toggle event:', err);
+      });
+
+    return updated;
+  });
+};
   const totalRows = scheduleData.length;
   const completedCount = Object.values(doneMap).filter(Boolean).length;
   const completedPct =
