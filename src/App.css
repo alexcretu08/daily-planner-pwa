@@ -1,0 +1,288 @@
+/* src/App.css */
+
+/* ──────────────────────────────────── */
+/* 1. Global & Container Styles        */
+/* ──────────────────────────────────── */
+
+.schedule-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #e0f3ff; /* very light blue background */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ──────────────────────────────────── */
+/* 2. Frozen Header (Title, Date, etc.)*/
+/* ──────────────────────────────────── */
+
+.header-frozen {
+  position: sticky;
+  top: 0;
+  background-color: #e0f3ff;
+  z-index: 10; /* stay above table when scrolling */
+  padding-bottom: 0.5rem;
+}
+
+.header-frozen h1 {
+  text-align: center;
+  color: #1a2d4f;
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
+}
+
+/* Center the date under the title */
+.header-frozen .date-line {
+  text-align: center;
+  color: #0e4fa1;
+  font-size: 1.125rem;
+  margin: 0.25rem 0;
+}
+
+.header-frozen .expenses-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.header-frozen .expenses-row label {
+  margin-right: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.header-frozen .expenses-row input {
+  width: 6rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #0077cc;
+  border-radius: 4px;
+  text-align: right;
+}
+
+/* Center the “Completed” line */
+.header-frozen .completed-line {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #1a2d4f;
+}
+
+/* ──────────────────────────────────── */
+/* 3. Schedule Table & Sticky Header   */
+/* ──────────────────────────────────── */
+
+/* Wrap the table in a scrollable div */
+.table-body-wrapper {
+  max-height: 400px; /* adjust as needed */
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+/* Make the table fill the container */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* let each column’s width be fixed by CSS rules below */
+}
+
+.schedule-table thead {
+  /* We stick the entire header row to the top of its parent .table-body-wrapper */
+}
+
+.schedule-table th {
+  background-color: #9ed1ff; /* medium-light blue */
+  color: #1a2d4f;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #005fa3; /* darker blue border */
+  text-align: center;
+  vertical-align: middle;
+  position: sticky;
+  top: 0; /* stick this <th> at top of scroll area */
+  z-index: 5;
+}
+
+/* Assign explicit widths to each column */
+.schedule-table th.col-done,
+.schedule-table td.col-done {
+  width: 10%;
+}
+
+.schedule-table th.col-time,
+.schedule-table td.col-time {
+  width: 20%;
+}
+
+.schedule-table th.col-activity,
+.schedule-table td.col-activity {
+  width: 40%;
+}
+
+.schedule-table th.col-category,
+.schedule-table td.col-category {
+  width: 30%;
+}
+
+/* ──────────────────────────────────── */
+/* 4. Scrollable Table Body            */
+/* ──────────────────────────────────── */
+
+.schedule-table tbody tr {
+  background-color: #ffffff;
+}
+
+.schedule-table tbody tr:nth-child(odd) {
+  background-color: #e8f5ff; /* alternating light blue */
+}
+
+.schedule-table tbody td {
+  padding: 0.5rem 0.25rem;
+  border: 1px solid #005fa3;
+  vertical-align: middle;
+  color: #1a2d4f;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Prevent “Time” column from wrapping */
+.schedule-table td.col-time {
+  white-space: nowrap;
+}
+
+/* Make “Done” checkboxes slightly larger */
+.done-checkbox {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* Center checkboxes in “Done” column */
+.schedule-table td.col-done {
+  text-align: center;
+}
+
+/* Buttons for choosing errands/shopping */
+.errand-display-btn {
+  background-color: #0077cc;
+  color: #ffffff;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.errand-display-btn:hover {
+  background-color: #005fa3;
+}
+
+/* ──────────────────────────────────── */
+/* 5. Shopping Sub‐row Styles          */
+/* ──────────────────────────────────── */
+
+.shopping-subrow {
+  background-color: #f0fbff;
+}
+
+.shopping-editor {
+  padding: 0.5rem;
+}
+
+.shopping-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shopping-item {
+  display: flex;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+
+.shopping-item.done label {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.shopping-delete-btn {
+  background: none;
+  border: none;
+  color: #cc0000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.shopping-add-row {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.shopping-add-input {
+  flex-grow: 1;
+  padding: 0.4rem;
+  border: 1px solid #005fa3;
+  border-radius: 4px;
+}
+
+.shopping-add-btn {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background-color: #005fa3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ──────────────────────────────────── */
+/* 6. Responsive Font Sizes            */
+/* ──────────────────────────────────── */
+
+@media (min-width: 600px) {
+  .schedule-container {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 599px) {
+  .schedule-container {
+    font-size: 14px;
+  }
+}
+/* ──────────────────────────────────── */
+/* 6a. Add‐Expense Button Styling       */
+/* ──────────────────────────────────── */
+.add-expense-btn {
+  background-color: #0077cc;
+  color: #ffffff;
+  border: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.add-expense-btn:hover {
+  background-color: #005fa3;
+}
+
+/* ──────────────────────────────────── */
+/* 6b. Total‐Expense Input Styling      */
+/* ──────────────────────────────────── */
+#total-expense-input {
+  border: 1px solid #0077cc;
+  border-radius: 4px;
+  padding: 0.25rem;
+  font-weight: 600;
+  width: 6rem;
+  text-align: right;
+}
+

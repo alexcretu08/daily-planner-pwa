@@ -1,0 +1,283 @@
+[
+    {
+      "id": "1",
+      "start": "06:45",
+      "end": "06:50",
+      "activity": "Wake up",
+      "category": "Morning Routine"
+    },
+    {
+      "id": "2",
+      "start": "06:50",
+      "end": "06:51",
+      "activity": "Weight",
+      "category": "Morning Routine"
+    },
+    {
+      "id": "3",
+      "start": "06:51",
+      "end": "06:53",
+      "activity": "Drink water",
+      "category": "Morning Routine"
+    },
+    {
+      "id": "4",
+      "start": "06:53",
+      "end": "07:18",
+      "activity": "Louie toilet 1",
+      "category": "Dog Care"
+    },
+    {
+      "id": "5",
+      "start": "07:18",
+      "end": "07:23",
+      "activity": "Louie play 1",
+      "category": "Dog Care"
+    },
+    {
+      "id": "6",
+      "start": "07:23",
+      "end": "07:28",
+      "activity": "Louie grooming",
+      "category": "Dog Care"
+    },
+    {
+      "id": "7",
+      "start": "07:28",
+      "end": "07:33",
+      "activity": "Shave",
+      "category": "Personal Hygiene"
+    },
+    {
+      "id": "8",
+      "start": "07:33",
+      "end": "07:38",
+      "activity": "Reinvention checklist",
+      "category": "Planning"
+    },
+    {
+      "id": "9",
+      "start": "07:38",
+      "end": "08:08",
+      "activity": "Morning tasks",
+      "category": "Errands"
+    },
+    {
+      "id": "10",
+      "start": "08:08",
+      "end": "08:30",
+      "activity": "Breakfast + Lifesum",
+      "category": "Meals & Health"
+    },
+    {
+      "id": "11",
+      "start": "08:30",
+      "end": "08:45",
+      "activity": "Clean around",
+      "category": "Housekeeping"
+    },
+    {
+      "id": "12",
+      "start": "08:45",
+      "end": "09:00",
+      "activity": "Shower + Celebrate",
+      "category": "Personal Hygiene"
+    },
+    {
+      "id": "13",
+      "start": "09:00",
+      "end": "10:00",
+      "activity": "Study",
+      "category": "Learning"
+    },
+    {
+      "id": "14",
+      "start": "10:00",
+      "end": "11:00",
+      "activity": "Louie long walk + toilet 2",
+      "category": "Dog Care"
+    },
+    {
+      "id": "15",
+      "start": "11:00",
+      "end": "11:30",
+      "activity": "Shopping",
+      "category": "Shopping"
+    },
+    {
+      "id": "16",
+      "start": "11:30",
+      "end": "11:40",
+      "activity": "Meditate",
+      "category": "Well-being"
+    },
+    {
+      "id": "17",
+      "start": "11:40",
+      "end": "12:00",
+      "activity": "Job search",
+      "category": "Career"
+    },
+    {
+      "id": "18",
+      "start": "12:00",
+      "end": "13:00",
+      "activity": "Study",
+      "category": "Learning"
+    },
+    {
+      "id": "19",
+      "start": "13:00",
+      "end": "13:30",
+      "activity": "Alex lunch + Lifesum",
+      "category": "Meals & Health"
+    },
+    {
+      "id": "20",
+      "start": "13:30",
+      "end": "13:30",
+      "activity": "Louie lunch",
+      "category": "Dog Care"
+    },
+    {
+      "id": "21",
+      "start": "13:30",
+      "end": "13:50",
+      "activity": "Language",
+      "category": "Learning"
+    },
+    {
+      "id": "22",
+      "start": "13:50",
+      "end": "14:00",
+      "activity": "Noon tasks",
+      "category": "Errands"
+    },
+    {
+      "id": "23",
+      "start": "14:00",
+      "end": "14:10",
+      "activity": "Meditate",
+      "category": "Well-being"
+    },
+    {
+      "id": "24",
+      "start": "14:10",
+      "end": "15:00",
+      "activity": "David’s call",
+      "category": "Appointments"
+    },
+    {
+      "id": "25",
+      "start": "15:00",
+      "end": "15:30",
+      "activity": "Louie toilet 3 + play 2",
+      "category": "Dog Care"
+    },
+    {
+      "id": "26",
+      "start": "15:30",
+      "end": "16:30",
+      "activity": "Sport",
+      "category": "Fitness"
+    },
+    {
+      "id": "27",
+      "start": "16:30",
+      "end": "17:30",
+      "activity": "Study",
+      "category": "Learning"
+    },
+    {
+      "id": "28",
+      "start": "17:30",
+      "end": "18:30",
+      "activity": "Study",
+      "category": "Learning"
+    },
+    {
+      "id": "29",
+      "start": "18:30",
+      "end": "18:35",
+      "activity": "Savings + Swica",
+      "category": "Finance & Admin"
+    },
+    {
+      "id": "30",
+      "start": "18:35",
+      "end": "18:45",
+      "activity": "Clean around",
+      "category": "Housekeeping"
+    },
+    {
+      "id": "31",
+      "start": "18:45",
+      "end": "19:15",
+      "activity": "Louie toilet 4 + play 3",
+      "category": "Dog Care"
+    },
+    {
+      "id": "32",
+      "start": "19:15",
+      "end": "20:15",
+      "activity": "Dinner Alex & Fabi",
+      "category": "Meals & Health"
+    },
+    {
+      "id": "33",
+      "start": "19:15",
+      "end": "19:15",
+      "activity": "Dinner Louie",
+      "category": "Dog Care"
+    },
+    {
+      "id": "34",
+      "start": "20:15",
+      "end": "20:45",
+      "activity": "Time with Fabi",
+      "category": "Relationship"
+    },
+    {
+      "id": "35",
+      "start": "20:45",
+      "end": "21:00",
+      "activity": "Apps – learn",
+      "category": "Learning"
+    },
+    {
+      "id": "36",
+      "start": "21:00",
+      "end": "21:15",
+      "activity": "Evening tasks",
+      "category": "Errands"
+    },
+    {
+      "id": "37",
+      "start": "21:15",
+      "end": "21:35",
+      "activity": "Louie toilet 5",
+      "category": "Dog Care"
+    },
+    {
+      "id": "38",
+      "start": "21:35",
+      "end": "21:40",
+      "activity": "Evening face routine",
+      "category": "Well-being"
+    },
+    {
+      "id": "39",
+      "start": "21:40",
+      "end": "21:55",
+      "activity": "Read",
+      "category": "Learning"
+    },
+    {
+      "id": "40",
+      "start": "21:55",
+      "end": "22:00",
+      "activity": "Meditate",
+      "category": "Well-being"
+    }
+  ]
+  
